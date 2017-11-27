@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  h1.page-title= title
+  ul.service-list.clearfix
+    each val in services
+      li.service-item.clearfix
+        figure.service-thumb
+          img(src='/images/' + val.thumb, alt=val.title)
+        h3.service-title= val.title
+        h5.service-subtitle= val.subtitle
